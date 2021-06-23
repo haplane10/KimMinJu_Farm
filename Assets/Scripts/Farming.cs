@@ -5,9 +5,7 @@ public class Farming : MonoBehaviour
 {
     public Tile FarmingTile;
     public Tilemap FarmTileMap;
-    public GameObject seedPrefab;
-
-    private Vector3Int previous;
+    public SeedScriptableObject seed;
 
     public void SetDigTile(Vector2 playerPosition)
     {
@@ -23,8 +21,9 @@ public class Farming : MonoBehaviour
         if (tile == FarmingTile)
         {
             Debug.Log("씨를 뿌리자");
-            var seed = Instantiate(seedPrefab);
-            seed.transform.position = new Vector2 (gridPosition.x + 0.5f, gridPosition.y + 0.5f);
+            var newPlant = Instantiate(seed.SeedPrefab);
+            newPlant.GetComponent<GrowPlant>().GrowTime = seed.GrowTime;
+            newPlant.transform.position = new Vector2(gridPosition.x + 0.5f, gridPosition.y + 0.5f);
             //newFire.StartBurning(tilePosition, data, this);
         }
         else

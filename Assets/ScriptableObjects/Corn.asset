@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667f63a726be2c94fa7db7225766028e, type: 3}
+  m_Name: Corn
+  m_EditorClassIdentifier: 
+  Name: "\uC625\uC218\uC218"
+  GrowTime: 20
+  SeedPrefab: {fileID: 1752717124011258489, guid: 3b7ccb5f84a38f84d980fa79f6f8ed75, type: 3}

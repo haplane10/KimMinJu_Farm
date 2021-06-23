@@ -9,6 +9,8 @@ public class ActionController : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] Farming farming;
     bool onFarm = false;
+
+    [SerializeField] SceneController controller;
     
     // Start is called before the first frame update
     void Start()
@@ -38,16 +40,22 @@ public class ActionController : MonoBehaviour
             animator.SetBool("Walk", false);
         }
 
-        if (onFarm && Input.GetKeyUp(KeyCode.Z))
+        if (Input.GetKeyUp(KeyCode.Z))
         {
             animator.SetTrigger("Duck");
-            farming.SetDigTile(transform.position);
+            if (onFarm)
+            {
+                farming.SetDigTile(transform.position);
+            }
         }
 
         if (Input.GetKeyUp(KeyCode.X))
         {
             animator.SetTrigger("Stab");
-            farming.SetSeedTile(transform.position);
+            if (onFarm)
+            {
+                farming.SetSeedTile(transform.position);
+            }
         }
 
         if (Input.GetKeyUp(KeyCode.C))
@@ -61,12 +69,38 @@ public class ActionController : MonoBehaviour
         }
     }
 
+    void MouseClick()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var hit = Physics2D.Raycast(mousePosition, Camera.main.transform.forward.normalized, 200f);
+            //Debug.DrawRay(mousePosition, Camera.main.transform.forward.normalized, Color.red, 200f);
+            if (hit)
+            {
+                if (hit.collider.CompareTag("House"))
+                {
+                    SceneController.Instance.LoadScene(2);
+                }
+
+                if (hit.collider.CompareTag("Shop"))
+                {
+                    SceneController.Instance.LoadScene(1);
+                }
+            }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Farm"))
         {
-            Debug.Log("OnFarm");
+            Debug.Log("농장에 진입했습니다.");
             onFarm = true;
+        }
+
+        if (collision.CompareTag("Door"))
+        {
+            SceneController.Instance.LoadScene(0);
         }
     }
 
@@ -76,13 +110,26 @@ public class ActionController : MonoBehaviour
         {
             Destroy(collision.gameObject);
         }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            if (collision.CompareTag("House"))
+            {
+                SceneController.Instance.LoadScene(2);
+            }
+            else if (collision.CompareTag("Shop"))
+            {
+                SceneController.Instance.LoadScene(1);
+            }
+            //MouseClick();
+        }
     }
     
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.CompareTag("Farm"))
         {
-            Debug.Log("Not OnFarm");
+            Debug.Log("농장에서 나왔습니다.");
             onFarm = false;
         }
     }
