@@ -8,4 +8,7 @@ public class SeedScriptableObject : ScriptableObject
     public string Name;
     public float GrowTime;
     public GameObject SeedPrefab;
+    public int HarvestRate;
+    public Sprite HarvectIcon;
+    public Sprite SeedIcon;
 }

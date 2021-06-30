@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 667f63a726be2c94fa7db7225766028e, type: 3}
-  m_Name: Corn
+  m_Name: Blueberry
   m_EditorClassIdentifier: 
-  Name: "\uC625\uC218\uC218"
-  GrowTime: 20
-  SeedPrefab: {fileID: 1752717124011258489, guid: 3b7ccb5f84a38f84d980fa79f6f8ed75, type: 3}
-  HarvestRate: 1
-  HarvectIcon: {fileID: 21300150, guid: 18fbfed32221c94429a999342d70d592, type: 3}
-  SeedIcon: {fileID: 21300048, guid: 18fbfed32221c94429a999342d70d592, type: 3}
+  Name: "\uBE14\uB8E8\uBCA0\uB9AC"
+  GrowTime: 60
+  SeedPrefab: {fileID: 2148547467515298960, guid: 565c6ebf63f772041be9335bc790af96, type: 3}
+  HarvestRate: 3

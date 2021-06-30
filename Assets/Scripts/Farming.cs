@@ -22,7 +22,13 @@ public class Farming : MonoBehaviour
         {
             Debug.Log("씨를 뿌리자");
             var newPlant = Instantiate(seed.SeedPrefab);
-            newPlant.GetComponent<GrowPlant>().GrowTime = seed.GrowTime;
+            var gp = newPlant.GetComponent<GrowPlant>();
+            gp.GrowTime = seed.GrowTime;
+            gp.Seed.Name = seed.Name;
+            gp.Seed.SeedIcon = seed.SeedIcon;
+            gp.Seed.HarvestIcon = seed.HarvectIcon;
+            gp.Seed.HarvestRate = seed.HarvestRate;
+
             newPlant.transform.position = new Vector2(gridPosition.x + 0.5f, gridPosition.y + 0.5f);
             //newFire.StartBurning(tilePosition, data, this);
         }

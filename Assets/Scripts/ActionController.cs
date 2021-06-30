@@ -108,6 +108,8 @@ public class ActionController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.C) && collision.CompareTag("Grow"))
         {
+            GameManager.Instance.AddHarvest(collision.GetComponent<GrowPlant>().Seed);
+            GameManager.Instance.UpdateInventory();
             Destroy(collision.gameObject);
         }
 

@@ -10,7 +10,10 @@ public class GrowPlant : MonoBehaviour
     float time = 0f;
     bool grew = false;
 
+    Seed seed = new Seed();
+
     public float GrowTime { get => growTime; set => growTime = value; }
+    public Seed Seed { get => seed; set => seed = value; }
 
 
     // Start is called before the first frame update
