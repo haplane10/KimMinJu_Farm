@@ -9,6 +9,7 @@ TagManager:
   - Shop
   - House
   - Door
+  - ShopUI
   layers:
   - Default
   - TransparentFX

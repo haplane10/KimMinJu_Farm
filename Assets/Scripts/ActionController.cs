@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ActionController : MonoBehaviour
 {
@@ -15,6 +16,10 @@ public class ActionController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (SceneManager.GetActiveScene().name.Contains("Game")) {
+            transform.position = GameManager.Instance.SpawnPosition;
+        }
+        
         animator = GetComponentInChildren<Animator>();
     }
 
@@ -117,11 +122,18 @@ public class ActionController : MonoBehaviour
         {
             if (collision.CompareTag("House"))
             {
+                GameManager.Instance.SpawnPosition = transform.position;
                 SceneController.Instance.LoadScene(2);
             }
             else if (collision.CompareTag("Shop"))
             {
+                GameManager.Instance.SpawnPosition = transform.position;
                 SceneController.Instance.LoadScene(1);
+            }
+
+            if (collision.CompareTag("ShopUI"))
+            {
+                collision.GetComponent<ShopController>().shopUI.SetActive(true);
             }
             //MouseClick();
         }
@@ -133,6 +145,11 @@ public class ActionController : MonoBehaviour
         {
             Debug.Log("농장에서 나왔습니다.");
             onFarm = false;
+        }
+
+        if (collision.CompareTag("ShopUI"))
+        {
+            collision.GetComponent<ShopController>().shopUI.SetActive(false);
         }
     }
 }

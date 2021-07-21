@@ -10,7 +10,10 @@ public class GameManager : MonoBehaviour
 
     public GameObject inventory;
     public GameObject itemButtonPrefab;
+
     public List<GameObject> items;
+
+    public Vector3 SpawnPosition;
 
     public List<Seed> seeds;
 
