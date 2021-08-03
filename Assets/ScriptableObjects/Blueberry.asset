@@ -16,3 +16,6 @@ MonoBehaviour:
   GrowTime: 60
   SeedPrefab: {fileID: 2148547467515298960, guid: 565c6ebf63f772041be9335bc790af96, type: 3}
   HarvestRate: 3
+  HarvestPrice: 15
+  HarvectIcon: {fileID: 0}
+  SeedIcon: {fileID: 0}

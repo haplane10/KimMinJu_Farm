@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public GameObject inventoryCanvas;
     public GameObject inventory;
     public GameObject itemButtonPrefab;
 
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     public Vector3 SpawnPosition;
 
     public List<Seed> seeds;
+
+    public int money;
 
 
     private void Awake()
@@ -72,7 +75,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.I))
+        {
+            inventoryCanvas.SetActive(true);
+        }
     }
 
     public void AddHarvest(Seed seed)
@@ -109,6 +115,7 @@ public class Seed
 {
     public string Name;
     public int HarvestRate;
+    public int HarvestPrice;
     public Sprite HarvestIcon;
     public int SeedRate;
     public Sprite SeedIcon;
