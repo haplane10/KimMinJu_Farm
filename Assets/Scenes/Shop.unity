@@ -398,6 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -490,6 +491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 10
+  name: "\uC625\uC218\uC218"
 --- !u!1 &132023303
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -710,6 +713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 15
+  name: "\uD1A0\uB9C8\uD1A0"
 --- !u!1 &156504539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2466,6 +2470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2591,6 +2596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2808,6 +2814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2940,6 +2947,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -3531,6 +3539,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &738490224
 Canvas:
   m_ObjectHideFlags: 0
@@ -3585,6 +3594,34 @@ PrefabInstance:
     - target: {fileID: 3897857672617027505, guid: 8e910730020c0564cba4f7b3f4c076b9, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3897857672617027510, guid: 8e910730020c0564cba4f7b3f4c076b9, type: 3}
+      propertyPath: seeds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3897857672617027510, guid: 8e910730020c0564cba4f7b3f4c076b9, type: 3}
+      propertyPath: seeds.Array.data[1].Name
+      value: "\uD1A0\uB9C8\uD1A0"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3897857672617027510, guid: 8e910730020c0564cba4f7b3f4c076b9, type: 3}
+      propertyPath: seeds.Array.data[1].SeedIcon
+      value: 
+      objectReference: {fileID: 21300226, guid: 18fbfed32221c94429a999342d70d592, type: 3}
+    - target: {fileID: 3897857672617027510, guid: 8e910730020c0564cba4f7b3f4c076b9, type: 3}
+      propertyPath: seeds.Array.data[1].SeedRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3897857672617027510, guid: 8e910730020c0564cba4f7b3f4c076b9, type: 3}
+      propertyPath: seeds.Array.data[1].HarvestIcon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3897857672617027510, guid: 8e910730020c0564cba4f7b3f4c076b9, type: 3}
+      propertyPath: seeds.Array.data[1].HarvestRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3897857672617027510, guid: 8e910730020c0564cba4f7b3f4c076b9, type: 3}
+      propertyPath: seeds.Array.data[1].HarvestPrice
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3897857672617027511, guid: 8e910730020c0564cba4f7b3f4c076b9, type: 3}
       propertyPath: m_RootOrder
@@ -4164,6 +4201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -4256,6 +4294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 30
+  name: "\uBCA0\uB9AC"
 --- !u!1 &1211208174
 GameObject:
   m_ObjectHideFlags: 0
@@ -4936,6 +4975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -5325,6 +5365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -5486,6 +5527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -5578,6 +5620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 20
+  name: "\uAC10\uC790"
 --- !u!1 &1849481524
 GameObject:
   m_ObjectHideFlags: 0
@@ -5697,6 +5740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -5822,6 +5866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -5914,6 +5959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 5
+  name: "\uC591\uD30C"
 --- !u!1 &1934440082
 GameObject:
   m_ObjectHideFlags: 0

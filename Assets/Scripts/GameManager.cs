@@ -41,7 +41,9 @@ public class GameManager : MonoBehaviour
 
     public void UpdateInventory()
     {
-        foreach(var _seed in seeds)
+        ClearInventory();
+
+        foreach (var _seed in seeds)
         {
             if (_seed.SeedRate > 0)
             {
@@ -69,6 +71,10 @@ public class GameManager : MonoBehaviour
 
     private void ClearInventory()
     {
+        foreach (var item in items)
+        {
+            Destroy(item);
+        }
         items.Clear();
     }
 
@@ -78,6 +84,7 @@ public class GameManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.I))
         {
             inventoryCanvas.SetActive(true);
+            UpdateInventory();
         }
     }
 
@@ -88,6 +95,10 @@ public class GameManager : MonoBehaviour
             if (_seed.Name == seed.Name)
             {
                 _seed.HarvestRate += seed.HarvestRate;
+
+                if (_seed.HarvestRate < 0) 
+                    _seed.HarvestRate = 0;
+
                 return;
             }
         }
